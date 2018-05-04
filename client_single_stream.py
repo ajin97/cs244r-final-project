@@ -21,6 +21,10 @@ clientsocket.connect(('localhost',8089))
 first_frame_seen = False
 caplen = 200
 
+# Read in all the frames and
+# set up dictionaries/lists to access
+# information about the type of frame
+# (I vs P/B frame).
 def get_frames():
     frames = []
     for i in range(caplen):
